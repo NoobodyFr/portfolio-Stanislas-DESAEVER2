@@ -6,14 +6,14 @@
     <title>Stanislas DESAEVER | Portfolio BTS SIO SISR</title>
     <style>
         :root {
-            --bg-deep: #05070b;
-            --bg-sidebar: #090d16;
-            --card-bg: rgba(13, 19, 33, 0.75);
-            --border-color: rgba(99, 102, 241, 0.2);
-            --accent-purple: #8b5cf6;
-            --accent-cyan: #06b6d4;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-deep: #f8fafc;
+            --bg-sidebar: #ffffff;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --accent-purple: #7c3aed;
+            --accent-cyan: #0284c7;
+            --text-main: #0f172a;
+            --text-muted: #475569;
             --sidebar-width: 280px;
         }
 
@@ -30,13 +30,9 @@
             color: var(--text-main);
             display: flex;
             min-height: 100vh;
-            background-image: 
-                linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
         }
 
-        /* --- SIDEBAR FIXE À GAUCHE --- */
+        /* --- SIDEBAR FIXE À GAUCHE (MODE CLAIR) --- */
         aside.sidebar {
             width: var(--sidebar-width);
             height: 100vh;
@@ -50,6 +46,7 @@
             flex-direction: column;
             justify-content: space-between;
             z-index: 100;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.03);
         }
 
         .sidebar-header .home-btn {
@@ -60,18 +57,18 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(139, 92, 246, 0.1);
+            background: rgba(124, 58, 237, 0.08);
             padding: 10px 16px;
             border-radius: 8px;
-            border: 1px solid rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(124, 58, 237, 0.2);
             margin-bottom: 8px;
             transition: all 0.2s ease;
         }
 
         .sidebar-header .home-btn:hover {
-            background: rgba(139, 92, 246, 0.25);
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
+            background: rgba(124, 58, 237, 0.15);
+            border-color: var(--accent-purple);
+            color: var(--accent-purple);
         }
 
         .sidebar-header p {
@@ -80,12 +77,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 5px;
+            font-weight: 600;
         }
 
         .sidebar-nav {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             margin: 30px 0;
         }
 
@@ -103,10 +101,11 @@
         }
 
         .sidebar-nav a:hover, .sidebar-nav a.active {
-            background: rgba(139, 92, 246, 0.15);
-            color: var(--accent-cyan);
-            border-left: 3px solid var(--accent-cyan);
+            background: rgba(124, 58, 237, 0.08);
+            color: var(--accent-purple);
+            border-left: 3px solid var(--accent-purple);
             padding-left: 18px;
+            font-weight: 600;
         }
 
         .sidebar-status {
@@ -118,7 +117,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: #34d399;
+            color: #047857;
+            font-weight: 500;
         }
 
         .sidebar-status::before {
@@ -127,14 +127,7 @@
             height: 8px;
             background-color: #10b981;
             border-radius: 50%;
-            box-shadow: 0 0 10px #10b981;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
+            box-shadow: 0 0 8px #10b981;
         }
 
         /* --- CONTENU PRINCIPAL --- */
@@ -152,12 +145,12 @@
         }
 
         .hero h2 {
-            font-size: 1rem;
-            color: var(--accent-cyan);
+            font-size: 0.95rem;
+            color: var(--accent-purple);
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 15px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .hero h1 {
@@ -203,43 +196,44 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-purple), #6366f1);
+            background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
             color: white;
             border: none;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
         }
 
         .btn-secondary {
-            background: var(--card-bg);
+            background: #ffffff;
             color: var(--text-main);
             border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
         .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(18, 24, 38, 0.9);
+            border-color: var(--accent-purple);
+            color: var(--accent-purple);
         }
 
-        /* Sections cartes */
+        /* Sections cartes blanches */
         section {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 40px;
             margin-bottom: 40px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
             scroll-margin-top: 40px;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
         }
 
         section:hover {
-            border-color: rgba(139, 92, 246, 0.4);
+            border-color: rgba(124, 58, 237, 0.3);
+            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.05);
         }
 
         section h2 {
@@ -247,7 +241,7 @@
             font-size: 1.6rem;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             gap: 12px;
@@ -278,40 +272,76 @@
         }
 
         li::before {
-            content: "▶";
+            content: "▪";
             color: var(--accent-purple);
             position: absolute;
             left: 0;
-            font-size: 0.65rem;
-            top: 5px;
+            font-size: 0.9rem;
         }
 
-        /* Cartes de veille */
+        /* Étapes des Veilles (Design étape par étape) */
         .veille-box {
-            background: rgba(5, 7, 11, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 25px;
-            margin-top: 20px;
+            padding: 30px;
+            margin-top: 25px;
         }
 
         .veille-box h3 {
+            color: var(--accent-purple);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .step-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 18px 20px;
+            border-radius: 8px;
+        }
+
+        .step-card h4 {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-card h4 span {
+            background: rgba(2, 132, 199, 0.1);
             color: var(--accent-cyan);
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
 
         .tech-tag {
             display: inline-block;
-            background: rgba(139, 92, 246, 0.1);
-            color: #c4b5fd;
-            border: 1px solid rgba(139, 92, 246, 0.25);
-            padding: 4px 10px;
+            background: rgba(124, 58, 237, 0.08);
+            color: var(--accent-purple);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            padding: 5px 12px;
             border-radius: 6px;
             font-size: 0.8rem;
             margin-right: 6px;
             margin-bottom: 8px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         footer {
@@ -436,58 +466,28 @@
         <!-- Veilles -->
         <section id="veilles">
             <h2><span>05.</span> Veilles Technologiques & Cybersécurité</h2>
-            <p>Fiches de révision structurées pour l'oral (Durée estimée : 2 min 30 par veille).</p>
+            <p>Fiches de révision structurées par étapes pour l'oral (Durée estimée : 2 min 30 par veille).</p>
 
-            <!-- Veille 1 -->
+            <!-- Veille 1 : IA Mangas -->
             <div class="veille-box">
-                <h3>📖 Fiche 1 : Veille Technologique — IA et Webtoons / Mangas</h3>
+                <h3>📖 Veille Technologique — IA et Webtoons / Mangas</h3>
                 <p><strong>Sujet :</strong> L'Intelligence Artificielle au service de la traduction et de la publication de Webtoons et Mangas.</p>
-                <ul>
-                    <li><strong>1. Contexte :</strong> Explosion de la demande de traduction immédiate face au succès mondial des mangas et webtoons (réduction d'un délai manuel de plusieurs jours à quelques minutes).</li>
-                    <li><strong>2. Fonctionnement technique :</strong> 
-                        <br>• <em>OCR :</em> Extraction automatique du texte dans les bulles.
-                        <br>• <em>Traduction Neuronale :</em> Adaptation contextuelle et linguistique.
-                        <br>• <em>Inpainting & Typographie :</em> Effacement de l'ancien texte et reconstruction numérique du fond.
-                    </li>
-                    <li><strong>3. Bilan :</strong> Illustration de l'IA appliquée aux flux de données et débat sur l'impact face aux traducteurs humains.</li>
-                </ul>
-                <div style="margin-top: 15px;">
+                
+                <div class="steps-container">
+                    <div class="step-card">
+                        <h4><span>Étape 1</span> Accroche & Contexte</h4>
+                        <p>Explosion de la popularité des mangas/webtoons créant une demande massive de traduction immédiate en français (contre plusieurs jours de travail manuel).</p>
+                    </div>
+                    <div class="step-card">
+                        <h4><span>Étape 2</span> Fonctionnement technique</h4>
+                        <p><strong>OCR :</strong> Scan de l'image pour détecter les bulles et extraire le texte. <br><strong>Traduction & Inpainting :</strong> Traduction neuronale contextuelle, effacement de l'ancien texte et reconstruction numérique du fond.</p>
+                    </div>
+                    <div class="step-card">
+                        <h4><span>Étape 3</span> Bilan & Ouverture</h4>
+                        <p>Illustration concrète de l'IA appliquée au traitement d'images et au workflow numérique, ouvrant le débat sur la place de l'IA face aux traducteurs humains.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
                     <span class="tech-tag">Intelligence Artificielle</span>
-                    <span class="tech-tag">OCR</span>
-                    <span class="tech-tag">Workflow Numérique</span>
-                </div>
-            </div>
-
-            <!-- Veille 2 -->
-            <div class="veille-box" style="margin-top: 25px;">
-                <h3>🛡️ Fiche 2 : Veille Cybersécurité — Le Smishing</h3>
-                <p><strong>Sujet :</strong> Le Smishing (Phishing par SMS) et les arnaques aux faux services.</p>
-                <ul>
-                    <li><strong>1. Contexte :</strong> Hausse spectaculaire des campagnes de SMS frauduleux ciblant les smartphones (faux colis, CPF, amendes).</li>
-                    <li><strong>2. Mécanisme :</strong> Usurpation d'identité officielle, urgence artificielle, lien raccourci vers un clone de site officiel et exfiltration des données.</li>
-                    <li><strong>3. Bilan :</strong> Illustration directe de l'ingénierie sociale ciblant l'humain. Parades : filtres anti-spam opérateurs, 2FA, sensibilisation.</li>
-                </ul>
-                <div style="margin-top: 15px;">
-                    <span class="tech-tag">Cybersécurité</span>
-                    <span class="tech-tag">Ingénierie Sociale</span>
-                    <span class="tech-tag">Smishing</span>
-                    <span class="tech-tag">2FA</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2><span>06.</span> Contact</h2>
-            <p>Pour me contacter dans le cadre d'un échange, d'une opportunité ou pour en savoir plus sur mon parcours :</p>
-            <p>📧 Email : <strong>stanislas.desaever@gmail.com</strong></p>
-            <p>🌐 GitHub : <a href="https://github.com/NoobodyFr" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">github.com/NoobodyFr</a></p>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 - Stanislas DESAEVER | Portfolio BTS SIO SISR</p>
-        </footer>
-    </main>
-
-</body>
-</html>
+                    <span class="
