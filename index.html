@@ -52,20 +52,25 @@
             z-index: 100;
         }
 
-        .sidebar-header .logo {
-            font-size: 1.3rem;
-            font-weight: 800;
+        .sidebar-header .home-btn {
+            font-size: 1rem;
+            font-weight: 700;
             color: var(--text-main);
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: rgba(139, 92, 246, 0.1);
-            padding: 8px 14px;
+            padding: 10px 16px;
             border-radius: 8px;
             border: 1px solid rgba(139, 92, 246, 0.3);
             margin-bottom: 8px;
+            transition: all 0.2s ease;
         }
 
-        .sidebar-header .logo span {
+        .sidebar-header .home-btn:hover {
+            background: rgba(139, 92, 246, 0.25);
+            border-color: var(--accent-cyan);
             color: var(--accent-cyan);
         }
 
@@ -74,6 +79,7 @@
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: 5px;
         }
 
         .sidebar-nav {
@@ -142,6 +148,7 @@
         /* Section Hero */
         .hero {
             margin-bottom: 60px;
+            scroll-margin-top: 60px;
         }
 
         .hero h2 {
@@ -337,7 +344,7 @@
     <!-- Barre latérale (Sidebar) -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <a href="#" class="logo">&lt;<span>S.D</span>/&gt;</a>
+            <a href="#accueil" class="home-btn">🏠 Accueil</a>
             <p>BTS SIO SISR</p>
         </div>
 
@@ -359,7 +366,7 @@
     <main class="main-content">
 
         <!-- Hero Section -->
-        <div class="hero">
+        <div class="hero" id="accueil">
             <h2>Portfolio Professionnel</h2>
             <h1><span>Stanislas DESAEVER</span></h1>
             <p>
@@ -384,7 +391,7 @@
         <section id="formation">
             <h2><span>02.</span> Formation</h2>
             <p><strong>BTS SIO — Option SISR (1ère année)</strong> (2026 - 2028)</p>
-            <p>Lycée / Établissement de formation — Solutions d'Infrastructure, Systèmes et Réseaux.</p>
+            <p>Solutions d'Infrastructure, Systèmes et Réseaux.</p>
             <br>
             <p><strong>Bac Pro SN — Option RISC</strong></p>
             <p>Réseaux Informatiques et Systèmes Communicants.</p>
